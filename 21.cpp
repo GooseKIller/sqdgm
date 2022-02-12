@@ -1,6 +1,5 @@
 #include <iostream>
 #include <ctime>
-#include <iomanip>
 using namespace std;
 
 int main()
@@ -30,8 +29,8 @@ int main()
                     e++;
                 }
             }c++;
-        }
-	        int a = rand() % 2;
+        }//making map
+	int a = rand() % 2;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 cout << setw(2) << arr[i][j] << " ";
@@ -46,14 +45,14 @@ int main()
         if (b == a) {
             place += 1;
             cout << place << ":place" << " " << life << ":survivers" << endl;
-        }
+        }//menu
         else {
             life -= 1;
             cout << place << ":place" << " " << life << ":survivers" << endl;
         }c = 1;
     }
     if (life >= 1 && place==n) {
-        cout << "win";
+        cout << "win";//game results
     }
     else  if (life == 0 && place<n){
         cout << "lose";
